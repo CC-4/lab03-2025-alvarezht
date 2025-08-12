@@ -99,18 +99,18 @@ RPAREN = ")"
 
 %%
 
-[0-9]+(\.[0-9]+)? { return new Symbol(Token.NUMBER, yytext()); }
+[0-9]+(\.[0-9]+)? { return new Token(Token.NUMBER, yytext()); }
 
 <YYINITIAL>{SEMI} { return new Token(Token.SEMI);   }
-<YYINITIAL>{PLUS} { return new Symbol(Token.PLUS); }
-<YYINITIAL>{MINUS} { return new Symbol(Token.MINUS); }
-<YYINITIAL>{MULT} { return new Symbol(Token.MULT); }
-<YYINITIAL>{DIV} { return new Symbol(Token.DIV); }
-<YYINITIAL>{MOD} { return new Symbol(Token.MOD); }
-<YYINITIAL>{EXP} { return new Symbol(Token.EXP); }
+<YYINITIAL>{PLUS} { return new Token(Token.PLUS); }
+<YYINITIAL>{MINUS} { return new Token(Token.MINUS); }
+<YYINITIAL>{MULT} { return new Token(Token.MULT); }
+<YYINITIAL>{DIV} { return new Token(Token.DIV); }
+<YYINITIAL>{MOD} { return new Token(Token.MOD); }
+<YYINITIAL>{EXP} { return new Token(Token.EXP); }
 
-<YYINITIAL>{LPAREN} { return new Symbol(Token.LPAREN); }
-<YYINITIAL>{RPAREN} { return new Symbol(Token.RPAREN); }
+<YYINITIAL>{LPAREN} { return new Token(Token.LPAREN); }
+<YYINITIAL>{RPAREN} { return new Token(Token.RPAREN); }
 
 
 <YYINITIAL>{WHITE}  { /* NO HACER NADA */             }
